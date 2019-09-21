@@ -11,7 +11,7 @@ passport.use(
       accessType: 'offline',
     },
     (request, accessToken, refreshToken, profile, done) => {
-      const { email } = profile._json;
+      const { email } = profile._json; // eslint-disable-line no-underscore-dangle
       done(null, email);
     },
   ),

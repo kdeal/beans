@@ -28,6 +28,7 @@ const sessionConfig = {
 app.use(session(sessionConfig));
 
 // OAuth2
+/* eslint-disable consistent-return */
 const authRequired = function authRequired(req, res, next) {
   if (!req.user) {
     req.session.oauth2return = req.originalUrl;
